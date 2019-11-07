@@ -4,7 +4,7 @@
     <date>2016-09-13T17:39:41Z</date>
     <groups>
         <group>
-            <name>LEO</name>
+            <name>pfSense-Gateways</name>
         </group>
         <group>
             <name>Templates</name>
@@ -12,12 +12,12 @@
     </groups>
     <templates>
         <template>
-            <template>LEO - PFSENSE - Monitor Gateway Status</template>
-            <name>LEO - PFSENSE - Monitor Gateway Status</name>
+            <template>Zabbix - PFSENSE - Monitor Gateway Status</template>
+            <name>Zabbix - PFSENSE - Monitor Gateway Status</name>
             <description/>
             <groups>
                 <group>
-                    <name>LEO</name>
+                    <name>pfSense-Gateways</name>
                 </group>
                 <group>
                     <name>Templates</name>
@@ -61,7 +61,7 @@
                         <conditions/>
                     </filter>
                     <lifetime>30</lifetime>
-                    <description>Monitora os gateways do pfsense</description>
+                    <description>Monitor pfsense gateways</description>
                     <item_prototypes>
                         <item_prototype>
                             <name>{#NAME} - delay</name>
@@ -108,7 +108,7 @@
                             <application_prototypes/>
                         </item_prototype>
                         <item_prototype>
-                            <name>{#NAME} - Pacotes perdidos</name>
+                            <name>{#NAME} - Lost Packages</name>
                             <type>0</type>
                             <snmp_community/>
                             <multiplier>0</multiplier>
@@ -286,8 +286,8 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{LEO - PFSENSE - Monitor Gateway Status:gateway[status,{#NAME},delay].last(#3)}&gt;100</expression>
-                            <name>Gateway {#NAME}: Latencia alta.</name>
+                            <expression>{Zabbix - pfSense - Monitor Gateway Status:gateway[status,{#NAME},delay].last(#3)}&gt;100</expression>
+                            <name>Gateway {#NAME}: High latency.</name>
                             <url/>
                             <status>0</status>
                             <priority>2</priority>
@@ -296,7 +296,7 @@
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{LEO - PFSENSE - Monitor Gateway Status:gateway[status,{#NAME},status].last(#3)}=0</expression>
+                            <expression>{Zabbix - pfSense - Monitor Gateway Status:gateway[status,{#NAME},status].last(#3)}=0</expression>
                             <name>Gateway  {#NAME}: Offline</name>
                             <url/>
                             <status>0</status>
@@ -306,7 +306,7 @@
                             <dependencies/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{LEO - PFSENSE - Monitor Gateway Status:gateway[status,{#NAME},status].last()}=0</expression>
+                            <expression>{Zabbix - pfSense - Monitor Gateway Status:gateway[status,{#NAME},status].last()}=0</expression>
                             <name>Gateway {#NAME}: Status Offline</name>
                             <url/>
                             <status>0</status>
