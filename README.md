@@ -1,5 +1,7 @@
 # zabbix-pfsense-gateway
 
+Bosnaski prevo pf-sense-gatewya templata za Zabbix
+
 #Pré requisitos
 * Instalar o pacote sudo no pfsense
 * Dar permissão pro grupo wheel "NO PASSWORD" System -> Sudo
