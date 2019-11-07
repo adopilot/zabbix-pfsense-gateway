@@ -12,8 +12,8 @@
     </groups>
     <templates>
         <template>
-            <template>Zabbix - PFSENSE - Monitor Gateway Status</template>
-            <name>Zabbix - PFSENSE - Monitor Gateway Status</name>
+            <template>Zabbix - pfSense - Monitor Gateway Status</template>
+            <name>Zabbix - pfSense - Monitor Gateway Status</name>
             <description/>
             <groups>
                 <group>
